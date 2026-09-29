@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejercicio 23 · Factorial</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <nav class="back"><a href="../index.html">&larr; Volver al índice</a></nav>
+  <div class="section-crumb">Sentencias: bucles</div>
+  <div class="card">
+    <div class="ex-head">
+      <span class="ex-num">23</span>
+      <h1 class="ex-title">Factorial</h1>
+    </div>
+    <div class="statement">
+      <p>El factorial de un número entero no negativo n, escrito n!, es el producto de todos los enteros positivos desde 1 hasta n. Por ejemplo, 5! = 5 × 4 × 3 × 2 × 1 = 120. Por convención, 0! = 1.</p>
+<p>Haz un script que pida un número y calcule su factorial. Si el valor introducido es incorrecto (solo se admiten enteros positivos), no debe mostrar nada por consola.</p>
+    </div>
+    
+    
+
+    <section class="panel">
+      <div class="panel-bar">
+        <span class="file-label">script.js</span>
+        <button class="btn" id="rerun">Volver a ejecutar</button>
+      </div>
+      <div class="output" id="output" aria-live="polite"></div>
+    </section>
+    <p class="hint">Edita <code>script.js</code> en VS Code, guarda, y pulsa "Volver a ejecutar" (o refresca la página). El enunciado también está repetido como comentario al principio de <code>script.js</code>.</p>
+  </div>
+</div>
+
+<script src="../assets/console-capture.js"></script>
+<script src="script.js"></script>
+<script>
+  document.getElementById("rerun").addEventListener("click", function () {
+    location.reload();
+  });
+</script>
+</body>
+</html>

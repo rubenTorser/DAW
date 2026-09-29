@@ -1,0 +1,42 @@
+<!-- /*********************************************************************
+HTML con dos scripts async que escriben números mediante bucles for.
+**********************************************************************/ -->
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- /*****************************************************************
+    Cada script carga el archivo señalado por src. ./ representa la carpeta
+    de este HTML, por lo que ambos archivos JavaScript se buscan junto a él.
+    Son scripts clásicos: no llevan el atributo type="module".
+    Sus bucles añaden párrafos a document.body mediante innerHTML: el de
+    ej1.2.1.js muestra del 1 al 100 y el de ej1.2.2.js del 900 al 1000.
+
+    async permite descargarlos mientras se analiza el documento y ejecuta
+    cada uno cuando está disponible. No garantiza el orden de ejecución:
+    el segundo puede ejecutarse antes que el primero, aunque aparezca debajo.
+    Tampoco espera a que se termine de analizar el HTML, como haría defer.
+    Si cualquiera se ejecuta antes de crearse body, document.body será null
+    y su acceso a innerHTML producirá un error que interrumpirá ese script.
+    El resultado puede depender del momento en que termine cada descarga.
+
+    Las descargas pueden coincidir, pero async no ejecuta estos bucles
+    síncronos al mismo tiempo: cada script ejecuta su bucle hasta terminar
+    o producir un error antes de que empiece el otro. Si ambos encuentran
+    el body, sus grupos de números pueden aparecer en uno u otro orden.
+
+    Los dos scripts comparten el entorno global de esta página. Por eso
+    sus declaraciones globales let y const deben usar nombres distintos:
+    declarar de nuevo uno de esos nombres en el otro script causa un error.
+    Los contadores i de sus for sí pueden coincidir porque tienen ámbito
+    local a cada bucle. Los nombres globales usados son MAX/seguir y
+    MAXI/seguiDO, respectivamente.
+    ******************************************************************/ -->
+    <script async src="./ej1.2.1.js"></script>
+    <script async src="./ej1.2.2.js"></script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,41 @@
+<!--
+/*********************************************************************
+HTML CON JAVASCRIPT ESCRITO DENTRO DEL DOCUMENTO
+Aunque la carpeta se llama "sin Script", el documento sí contiene una
+etiqueta script. Lo que no utiliza es un archivo JavaScript externo:
+el código se escribe directamente en este HTML y muestra un mensaje
+en la consola del navegador.
+**********************************************************************/
+-->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!--
+    /*********************************************************************
+    script sin src contiene JavaScript interno, también llamado inline.
+    Este script clásico se ejecuta cuando el navegador encuentra la etiqueta,
+    antes de continuar analizando el HTML que viene a continuación.
+    Aquí solo usa console, de modo que no necesita que el body ya exista.
+    defer no retrasa un script clásico interno; se utiliza con archivos
+    externos cargados mediante src.
+    **********************************************************************/
+    -->
+    <script>
+      /*********************************************************************
+      console permite acceder a la consola de las herramientas de desarrollo.
+      Su método log muestra el argumento recibido entre paréntesis: una
+      cadena de texto delimitada por comillas. El ; final cierra la instrucción.
+      Este mensaje se consulta en la pestaña Consola de esas herramientas;
+      no se incorpora al contenido HTML visible de la página.
+      Dentro de script se utiliza la sintaxis de comentarios de JavaScript.
+      **********************************************************************/
+      console.log("Hello, World!!!");
+    </script>
+  </head>
+  <body></body>
+</html>

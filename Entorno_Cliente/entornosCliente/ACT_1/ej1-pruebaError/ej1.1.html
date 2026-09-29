@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- /*****************************************************************
+    script enlaza JavaScript externo mediante src. La ruta ./ej1.1.js busca
+    el archivo en la misma carpeta que este documento HTML.
+    Su bucle añade párrafos con los números del 0 al 10 a document.body.
+
+    defer permite descargarlo mientras continúa el análisis del HTML y
+    retrasa su ejecución hasta que el documento termina de analizarse.
+    Así, cuando este script accede a document.body, el body ya existe.
+    Si hubiera varios scripts clásicos externos con defer, se ejecutarían
+    en el orden en que aparecen en el documento, antes de DOMContentLoaded.
+    ******************************************************************/ -->
+    <script defer src="./ej1.1.js"></script>
+  </head>
+  <body></body>
+</html>

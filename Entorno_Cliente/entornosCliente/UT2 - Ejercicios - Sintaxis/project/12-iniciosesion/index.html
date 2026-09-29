@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejercicio 12 · INICIOSESION</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <nav class="back"><a href="../index.html">&larr; Volver al índice</a></nav>
+  <div class="section-crumb">Sentencias: decisiones</div>
+  <div class="card">
+    <div class="ex-head">
+      <span class="ex-num">12</span>
+      <h1 class="ex-title">INICIOSESION</h1>
+    </div>
+    <div class="statement">
+      <p>Escribe un código que pregunte por el inicio de sesión con <code>prompt</code>.</p>
+<p>Si el visitante introduce "Admin", pide una contraseña (con un nuevo <code>prompt</code>). Si la entrada es una línea vacía o se pulsa Esc, muestra "Cancelado.". Si es cualquier otro texto, muestra "No te conozco".</p>
+<p>La contraseña se comprueba así:</p>
+<ul>
+  <li>Si es igual a "TheMaster", muestra "¡Bienvenido!"</li>
+  <li>Si es cualquier otro texto, muestra "Contraseña incorrecta"</li>
+  <li>Para una cadena vacía o una entrada cancelada, muestra "Cancelado."</li>
+</ul>
+<p>Usa bloques anidados de <code>if</code>. Piensa en la legibilidad general del código.</p>
+<p>Pista: si se pasa una entrada vacía a <code>prompt</code>, devuelve una cadena vacía <code>''</code>. Pulsar Esc durante un prompt devuelve <code>null</code>.</p>
+<p>Más información: <a href="https://es.javascript.info/logical-operators#comprueba-el-inicio-de-sesion" target="_blank" rel="noopener">Comprueba el inicio de sesión</a>.</p>
+    </div>
+    
+    
+
+    <section class="panel">
+      <div class="panel-bar">
+        <span class="file-label">script.js</span>
+        <button class="btn" id="rerun">Volver a ejecutar</button>
+      </div>
+      <div class="output" id="output" aria-live="polite"></div>
+    </section>
+    <p class="hint">Edita <code>script.js</code> en VS Code, guarda, y pulsa "Volver a ejecutar" (o refresca la página). El enunciado también está repetido como comentario al principio de <code>script.js</code>.</p>
+  </div>
+</div>
+
+<script src="../assets/console-capture.js"></script>
+<script src="script.js"></script>
+<script>
+  document.getElementById("rerun").addEventListener("click", function () {
+    location.reload();
+  });
+</script>
+</body>
+</html>

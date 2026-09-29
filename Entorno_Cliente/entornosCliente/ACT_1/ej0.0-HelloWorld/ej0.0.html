@@ -1,0 +1,41 @@
+<!--
+/*********************************************************************
+HTML CON UN ARCHIVO JAVASCRIPT EXTERNO
+Esta página muestra un encabezado y carga helloWorld.js. El script escribe
+un mensaje en la consola y cambia a azul el color del encabezado.
+**********************************************************************/
+-->
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 0 - Hello, World!</title>
+
+    <!--
+    /*********************************************************************
+    script carga código JavaScript. src indica la ruta del archivo externo;
+    ./ significa que helloWorld.js está en la misma carpeta que este HTML.
+    defer permite descargarlo mientras se analiza el HTML y retrasa su
+    ejecución hasta que el navegador termina de construir el DOM, que es
+    la representación del documento en forma de objetos accesibles desde JS.
+    Así, el h1 del body ya existe cuando el script intenta seleccionarlo.
+    No necesita esperar a que terminen de cargar todas las imágenes.
+    Si hubiera varios scripts clásicos con defer, respetarían su orden
+    de aparición y se ejecutarían antes del evento DOMContentLoaded.
+    **********************************************************************/
+    -->
+    <script defer src="./helloWorld.js"></script>
+  </head>
+  <body>
+    <!--
+    /*********************************************************************
+    helloWorld.js busca el id="colorLetra" con document.getElementById
+    para modificar el color del texto mediante la propiedad style.color.
+    El identificador debe coincidir exactamente con el usado en el script.
+    **********************************************************************/
+    -->
+    <h1 id="colorLetra">Hello, World!!!!</h1>
+  </body>
+</html>
