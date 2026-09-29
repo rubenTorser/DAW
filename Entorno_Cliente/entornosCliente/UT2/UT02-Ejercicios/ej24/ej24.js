@@ -12,5 +12,5 @@
 //Dará error porque la variable ya está declarada, lo correcto sería://
 
 let x = 45;
-x = 10;
+x = 15;
 alert(x);
