@@ -109,4 +109,79 @@ $modulosDe1y2 = [
     ]
 
 ];
+
+
+//Mostrar el número de horas lectivas de cada módulo de primero
+
+foreach ($modulosDe1y2['primero'] as $modulo => $horas) {
+
+    echo "El módulo \"$modulo\" tiene $horas horas lectivas <br>";
+
+}
+
+echo "<br><br>";
+
+
+//Recorrer el array asociativo bidimensional y mostrar el número de horas lectivas de cada módulo de primero y segundo
+foreach ($modulosDe1y2 as $curso => $modulos) {
+
+    echo "Módulos de $curso: <br>";
+
+    foreach ($modulos as $modulo => $horas) {
+        echo "El módulo \"$modulo\" tiene $horas horas lectivas <br>";
+    }
+
+    echo "<br>";
+
+}
+
+echo "<br><br>";
+
+
+
+$ganadores = [
+
+    'Fiestas 2025' => [
+        'Tenis' => 'María Alonso',
+        'Ajedrez' => 'Antonio López',
+        'Pin-pon' => 'Ana Benito',
+        'Mus' => 'Luis Martín'
+    ],
+    'Fiestas 2026' => [
+        'Tenis' => 'Marcos Lopez',
+        'Ajedrez' => 'Angustin Perez',
+        'Mus' => 'José Francisco',
+        'Futbol' => 'Pedro Torres',
+        'Futbolín' => 'Rubén de la Torre',
+        'Baloncesto' => 'Angela Martínez',
+    ]
+];
+
+
+
+//Mostrar los ganadores de cada deporte en las fiestas de 2025 y 2026
+foreach ($ganadores as $fiestas => $deportes) {
+
+    echo "Ganadores de las $fiestas: <br>";
+
+    foreach ($deportes as $deporte => $ganador) {
+        echo "El ganador del deporte \"$deporte\" es $ganador <br>";
+    }
+
+    echo "<br>";
+
+}
+
+
+echo "<br><br>";
+
+
+//Mostrar sólo los nombres de los ganadores de todos los años
+foreach ($ganadores as $fiestas => $deportes) {
+
+    foreach ($deportes as $deporte => $ganador) {
+        echo "$ganador <br>";
+    }
+
+}
 ?>
