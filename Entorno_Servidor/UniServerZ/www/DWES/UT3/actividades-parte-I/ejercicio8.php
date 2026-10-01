@@ -13,7 +13,7 @@ de los salvajes, denonimación y hábitat).
 
 $animales = [
 
-    $domesticos = ['Perro', 'Gato', 'Conejo'],
+    'domésticos' => ['Perro', 'Gato', 'Conejo'],
 
     'salvajes' => [
         'Tigre' => 'Selva',
@@ -24,6 +24,29 @@ $animales = [
 
 ];
 
+// - Muestra el array con var_dump().
 
 var_dump($animales);
+
+
+echo "<br><br>";
+
+
+// - Recorre el array y muestra su información lo más legible que sepas.
+
+foreach ($animales as $tipoAnimal => $animalesDelTipo) {
+
+    echo "<br><h3>Animales $tipoAnimal: </h3>";
+
+    if ($tipoAnimal == 'domésticos') {
+        foreach ($animalesDelTipo as $animal) {
+            echo "- $animal <br>";
+        }
+    } else {
+        foreach ($animalesDelTipo as $animal => $habitat) {
+            echo "- $animal (Hábitat: $habitat) <br>";
+        }
+    }
+
+}
 ?>
