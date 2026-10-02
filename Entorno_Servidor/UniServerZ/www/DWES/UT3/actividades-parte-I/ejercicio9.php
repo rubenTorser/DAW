@@ -14,20 +14,12 @@ A continuación:
 
 $matriculasDeHonor = [
 
-    '1' => [
-        'DWES001' => 9.2,
-        'DWES002' => 9.5,
-        'DWES003' => 9.8,
-        'DWES004' => 9.1,
-        'DWES005' => 9.7
-    ],
-
-    '2' => [
-        'DWES001' => 9.4,
-        'DWES002' => 9.6,
-        'DWES003' => 9.9,
-        'DWES004' => 9.3,
-        'DWES005' => 9.8
+    'notasPrimeroYSegundo' => [
+        'DWES001' => [9.2, 9.4],
+        'DWES002' => [9.5, 9.6],
+        'DWES003' => [9.8, 9.9],
+        'DWES004' => [9.8, 9.9],
+        'DWES005' => [9.7, 9.8]
     ]
 ];
 
@@ -37,24 +29,35 @@ $matriculasDeHonor = [
 */
 
 $mediaMax = 0;
-$matriculaMax = '';
+$matriculasMax = [];
 
-// Recorremos las notas de la primera evaluación, alumno por alumno.
-foreach ($matriculasDeHonor[1] as $matricula => $notaPrimera) {
+// Recorremos cada matrícula junto con sus dos notas de evaluación.
+foreach ($matriculasDeHonor['notasPrimeroYSegundo'] as $matricula => $notas) {
 
-    // Usamos la misma matrícula para buscar su nota de la segunda evaluación.
-    $notaSegunda = $matriculasDeHonor[2][$matricula];
-    $media = ($notaPrimera + $notaSegunda) / 2;
+    // La posición 0 contiene la primera nota y la posición 1, la segunda.
+    $notaPrimera = $notas[0];
+    $notaSegunda = $notas[1];
+    // Redondeamos a dos decimales para evitar pequeñas diferencias al comparar las medias.
+    $media = round(($notaPrimera + $notaSegunda) / 2, 2);
 
     echo "Matrícula: $matricula - Media: $media <br>";
 
-    // Si encontramos una media mayor, guardamos la media y su matrícula.
+    // Si encontramos una media mayor, guardamos su matrícula y descartamos las anteriores.
     if ($media > $mediaMax) {
         $mediaMax = $media;
-        $matriculaMax = $matricula;
+        $matriculasMax = [$matricula];
+    } elseif ($media == $mediaMax) {
+        // Si la media coincide con la máxima, añadimos la matrícula a la lista.
+        $matriculasMax[] = $matricula;
     }
 
 }
 
-echo "<br>La media más alta es $mediaMax y corresponde a la matrícula $matriculaMax.";
+echo "<br>La media más alta es $mediaMax.";
+echo "<br>Número de matrículas con la media más alta: " . count($matriculasMax) . "<br>";
+
+// Mostramos todas las matrículas que tienen la media máxima.
+foreach ($matriculasMax as $matricula) {
+    echo "Matrícula: $matricula <br>";
+}
 ?>
