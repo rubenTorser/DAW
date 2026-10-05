@@ -56,4 +56,18 @@ echo "<br><br>";
 
 //var_dump($array2); // Muestra el array modificado
 
+
+
+/*****************************************************************************/
+
+/*
+
+El símbolo ? en el parámetro sirve para indicar que el parámetro puede ser nulo.
+
+Si inicializamos el parámetro en el paréntesis de la función, ese parámetro 
+se convierte en OPCIONAL. Si no se pasa ningún valor al llamar a la función, 
+el parámetro tomará el valor por defecto que hayamos definido.
+
+*/
+
 ?>
