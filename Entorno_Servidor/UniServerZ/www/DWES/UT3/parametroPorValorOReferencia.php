@@ -26,7 +26,7 @@ var_dump($array1); // Muestra el array original sin cambios
 
 //Pasar parámetro por referencia
 
-$array = array(1, 2, 3, 4, 5);
+$array2 = array(1, 2, 3, 4, 5);
 
 function invertirArrayReferencia(&$array)
 {
@@ -34,7 +34,7 @@ function invertirArrayReferencia(&$array)
     return $array;
 }
 
-invertirArrayReferencia($array);
-var_dump($array); // Muestra el array modificado
+invertirArrayReferencia($array2);
+var_dump($array2); // Muestra el array modificado
 
 ?>
