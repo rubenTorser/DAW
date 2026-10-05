@@ -14,11 +14,14 @@ $array1 = array(1, 2, 3, 4, 5);
 function invertirArrayValor($array)
 {
     $array = array_reverse($array);
-    return $array;
+
+    for ($i = 0; $i < count($array); $i++) {
+        echo $array[$i] . " <br> ";
+    }
 }
 
 invertirArrayValor($array1);
-var_dump($array1); // Muestra el array original sin cambios
+//var_dump($array1); // Muestra el array original sin cambios
 
 
 /*************************************************************************/
@@ -31,10 +34,12 @@ $array2 = array(1, 2, 3, 4, 5);
 function invertirArrayReferencia(&$array)
 {
     $array = array_reverse($array);
-    return $array;
+    for ($i = 0; $i < count($array); $i++) {
+        echo $array[$i] . " <br> ";
+    }
 }
 
 invertirArrayReferencia($array2);
-var_dump($array2); // Muestra el array modificado
+//var_dump($array2); // Muestra el array modificado
 
 ?>
