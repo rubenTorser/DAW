@@ -11,13 +11,13 @@ Diferencias entre pasar un parámetro por valor o por referencia.
 
 $array1 = array(1, 2, 3, 4, 5);
 
-function invertirArray($array)
+function invertirArrayValor($array)
 {
     $array = array_reverse($array);
     return $array;
 }
 
-invertirArray($array1);
+invertirArrayValor($array1);
 var_dump($array1); // Muestra el array original sin cambios
 
 
