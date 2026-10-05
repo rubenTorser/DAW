@@ -7,7 +7,7 @@
 
 "use strict";
 
-let str = "hola mundo";
+let cadena = "hola mundo";
 
 function inicialMay(str) {
 
@@ -17,4 +17,4 @@ function inicialMay(str) {
 
 }
 
-console.log(inicialMay(str));
+console.log(inicialMay(cadena));

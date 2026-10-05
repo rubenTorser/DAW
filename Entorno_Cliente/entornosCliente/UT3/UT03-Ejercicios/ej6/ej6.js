@@ -19,8 +19,8 @@ function contarLetra(cad, letra) {
         }
     }
 
-    return console.log(contador);
+    return contador;
 }
 
 
-contarLetra("Hola mundo", "o"); // 2
+console.log(contarLetra("Hola mundo", "o")); // 2

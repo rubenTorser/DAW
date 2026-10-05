@@ -11,7 +11,9 @@ function comprobarSpam(str) {
 
     let boolean = false;
 
-    if (str.includes("gratis") || str.includes("XXX")) {
+    str = str.toLowerCase();
+
+    if (str.includes("gratis") || str.includes("xxx")) {
         boolean = true;
     }
 
@@ -19,7 +21,6 @@ function comprobarSpam(str) {
 
 }
 
+let palabra = "Este producto es Gratis";
 
-let str = "Este producto es gratis";
-
-console.log(comprobarSpam(str));
+console.log(comprobarSpam(palabra));
