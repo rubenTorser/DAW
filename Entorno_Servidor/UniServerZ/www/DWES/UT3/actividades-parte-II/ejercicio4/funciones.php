@@ -78,4 +78,58 @@ function mostrarPosicionesCuadrado(array &$a, ?string &$resultado): void
     }
 
 }
+
+
+
+//Visualizar el array en orden invertido
+
+function mostrarArrayInvertido(array &$a, ?string &$resultado): void
+{
+
+    $resultado = "";
+
+    for ($i = count($a) - 1; $i >= 0; $i--) {
+
+        $resultado .= $a[$i] . " ";
+
+    }
+
+}
+
+
+
+//Crear un nuevo array con el doble de los componentes del primer array
+
+function crearArrayDoble(array &$a, array &$dobleDeComponentes): void
+{
+
+    $dobleDeComponentes = [];
+
+    for ($i = 0; $i < count($a); $i++) {
+
+        $dobleDeComponentes[$i] = $a[$i] * 2;
+
+    }
+
+}
+
+
+
+//Incrementar en dos los componentes del array original
+
+/*
+El array se pasa por referencia para que los cambios realizados
+dentro de la función se conserven en el array original.
+Después reutilizamos calcularMedia para obtener su nueva media.
+*/
+function incrementarComponentesEnDos(array &$a): void
+{
+
+    for ($i = 0; $i < count($a); $i++) {
+
+        $a[$i] += 2;
+
+    }
+
+}
 ?>

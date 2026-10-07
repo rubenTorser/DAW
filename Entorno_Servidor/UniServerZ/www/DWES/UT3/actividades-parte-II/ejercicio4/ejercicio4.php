@@ -23,10 +23,35 @@ echo calcularMedia($arrayDeNumeros);
 
 
 //Apartado C: Visualiza las posiciones del array en las que se almacene como valor el cuadrado de su posición.
-$resultado;
+$resultado = "";
 mostrarPosicionesCuadrado($arrayDeNumeros, $resultado);
 echo "<br><br>" . $resultado;
 
+
+//Apartado D: Visualizar el array en orden invertido
+mostrarArrayInvertido($arrayDeNumeros, $resultado);
+echo "<br> El array en orden invertido es: " . $resultado . "<br>";
+
+
+//Apartado E: Crear un nuevo array con el doble de los componentes del primer array
+$dobleDeComponentes = [];
+crearArrayDoble($arrayDeNumeros, $dobleDeComponentes);
+
+echo "<br> El array con el doble de los componentes es: ";
+
+for ($i = 0; $i < count($dobleDeComponentes); $i++) {
+
+    echo $dobleDeComponentes[$i] . " ";
+
+}
+
+echo "<br>";
+
+
+//Apartado F: Incrementar en dos los componentes del array original y calcular de nuevo su media
+incrementarComponentesEnDos($arrayDeNumeros);
+$mediaDeComponentes = calcularMedia($arrayDeNumeros);
+echo "<br> La media de los componentes incrementados en dos es de: $mediaDeComponentes <br>";
 
 
 ?>
