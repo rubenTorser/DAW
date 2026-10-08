@@ -17,4 +17,7 @@ echo "<br><br>";
 
 echo ord('A'); //ord() devuelve el valor ASCII del carácter que le pasamos como argumento
 
+echo "<br><br>";
+
+$ej = [6, 7, 8, 9, 10, 11];
 ?>
