@@ -13,5 +13,8 @@ echo "<br><br>";
 
 echo calcular('producto', $num1, $num2); //invocamos a la función calcular, pasándole como primer argumento el nombre de la función que queremos invocar
 
+echo "<br><br>";
+
+echo ord('A'); //ord() devuelve el valor ASCII del carácter que le pasamos como argumento
 
 ?>
