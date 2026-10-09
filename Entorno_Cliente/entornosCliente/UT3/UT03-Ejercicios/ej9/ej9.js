@@ -11,7 +11,7 @@
 
 "use strict";
 
-function palindromo(cadena) {
+/*function palindromo(cadena) {
 
     let cadenaInvertida = "";
 
@@ -27,10 +27,29 @@ function palindromo(cadena) {
         cadenaInvertida += cadena[i];
     }
 
-    return console.log(cadena === cadenaInvertida);
+    return cadena === cadenaInvertida;
+
+}*/
+
+
+function palindromo(cadena) {
+
+    let cadenaInvertida = "";
+
+    cadena = cadena.toLowerCase();
+
+    cadena = cadena.replace(/ /g, "");
+
+
+
+    for (let i = cadena.length - 1; i >= 0; i--) {
+        cadenaInvertida += cadena[i];
+    }
+
+    return cadena === cadenaInvertida;
 
 }
 
-palindromo("Yo hago yoga hoy"); // true
-palindromo("Ana lava lana"); // true
-palindromo("recono  cerse"); // true
+console.log(palindromo("Yo hago yoga hoy")); // true
+console.log(palindromo("Ana lava lana")); // true
+console.log(palindromo("reconocerse")); // false
