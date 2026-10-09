@@ -33,6 +33,45 @@
 
 function validarNIF_NIE(nif_nie) {
 
+    // El documento debe ser una cadena de 9 caracteres.
+    if (typeof nif_nie !== "string" || nif_nie.length !== 9) {
+        return false;
+    }
 
+    // Pasamos las letras a mayúsculas para aceptar también las minúsculas.
+    nif_nie = nif_nie.toUpperCase();
 
+    let letras = "TRWAGMYFPDXBNJZSQVHLCKE";
+    let numero = nif_nie.substring(0, 8);
+    let letra = nif_nie.substring(8);
+
+    // Si es un NIE, sustituimos la letra inicial por su valor numérico.
+    if (numero[0] === "X") {
+        numero = numero.replace("X", "0");
+    } else if (numero[0] === "Y") {
+        numero = numero.replace("Y", "1");
+    } else if (numero[0] === "Z") {
+        numero = numero.replace("Z", "2");
+    }
+
+    // Tras la sustitución, los 8 caracteres deben ser dígitos del 0 al 9.
+    for (let i = 0; i < numero.length; i++) {
+        if (!"0123456789".includes(numero[i])) {
+            return false;
+        }
+    }
+
+    // El resto de dividir entre 23 indica la posición de la letra correcta.
+    let resto = Number(numero) % 23;
+
+    // Devolvemos true si la letra coincide y false si es incorrecta.
+    return letra === letras[resto];
 }
+
+console.log(validarNIF_NIE("56221526G")); // true: DNI correcto.
+console.log(validarNIF_NIE("12313207L")); // true: NIF correcto.
+console.log(validarNIF_NIE("Y6478436V")); // true: NIE correcto.
+console.log(validarNIF_NIE("x3412471f")); // true: también acepta minúsculas.
+console.log(validarNIF_NIE("56221526A")); // false: letra de control incorrecta.
+console.log(validarNIF_NIE("Q6478436V")); // false: letra inicial no válida.
+console.log(validarNIF_NIE("5622152G")); // false: faltan dígitos.
