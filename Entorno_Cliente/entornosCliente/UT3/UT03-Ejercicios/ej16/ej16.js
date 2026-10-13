@@ -24,4 +24,4 @@ function diaSemanaLocal(fecha) {
 }
 
 
-console.log(diaSemanaLocal(new Date(2026, 5, 10))); // Devuelve 4 (jueves)
+console.log(diaSemanaLocal(new Date(2026, 9, 13))); // Devuelve 2 (martes)

@@ -14,4 +14,4 @@ function diaSemana(fecha) {
 
 }
 
-console.log(diaSemana(new Date(2026, 5, 6))); // Devuelve "jueves"
+console.log(diaSemana(new Date(2026, 13, 9))); // Devuelve "martes"
