@@ -18,6 +18,7 @@ $farmacos = [
     'aspirina' => '10-10-2028'
 ];
 
+
 $caducados = farmacosCaducados($farmacos);
 
 foreach ($caducados as $nombre => $fechaCaducidad) {

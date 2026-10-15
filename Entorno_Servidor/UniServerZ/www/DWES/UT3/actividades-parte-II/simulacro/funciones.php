@@ -19,11 +19,17 @@ function actualizarDescuento(array &$libros): void
 
 }
 
-/*function obtenerTitulos(array &$libros): array
+function obtenerTitulos(array &$libros): array
 {
 
     $titulos = [];
 
-}*/
+    foreach ($libros as $titulo => $datos) {
+        $titulos[] = $titulo;
+    }
+
+    return $titulos;
+
+}
 
 ?>

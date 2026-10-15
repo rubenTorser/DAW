@@ -33,4 +33,11 @@ foreach ($libros as $titulo => $datos) {
     echo "<p>Título: {$titulo}, Año: {$datos[0]}, Precio: {$datos[1]} €</p>";
 }
 
+
+echo "<h2>Listado de títulos de los libros:</h2>";
+$titulos = obtenerTitulos($libros);
+foreach ($titulos as $titulo) {
+    echo "<p>{$titulo}</p>";
+}
+
 ?>
