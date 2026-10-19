@@ -18,11 +18,12 @@
 
 "use strict";
 
+let date = new Date(2015, 0, 2);
 
 function obtenerFechaHace(fecha, dias) {
 
     // Crear una nueva fecha para no modificar la original
-    let copiaFecha = new Date(fecha);
+    const copiaFecha = new Date(fecha);
 
     copiaFecha.setDate(copiaFecha.getDate() - dias);
 
@@ -30,8 +31,9 @@ function obtenerFechaHace(fecha, dias) {
 
 }
 
+console.log(obtenerFechaHace(date, 1)); // Devuelve 1 (1 Jan 2015)
+console.log(obtenerFechaHace(date, 2)); // Devuelve 31 (31 Dec 2014)
+console.log(obtenerFechaHace(date, 365)); // Devuelve 2 (2 Jan 2014)
+console.log(obtenerFechaHace(date, 2125)); // Devuelve 9 (9 Jan 2009)
 
-console.log(obtenerFechaHace(new Date(2015, 0, 2), 1)); // Devuelve 1 (1 Jan 2015)
-console.log(obtenerFechaHace(new Date(2015, 0, 2), 2)); // Devuelve 31 (31 Dec 2014)
-console.log(obtenerFechaHace(new Date(2015, 0, 2), 365)); // Devuelve 2 (2 Jan 2014)
-console.log(obtenerFechaHace(new Date(2015, 0, 2), 2125)); // Devuelve 9 (9 Jan 2009)
+console.log(date.toLocaleDateString()); // Devuelve 2/1/2015, la fecha original no se ha modificado

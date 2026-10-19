@@ -10,7 +10,7 @@ getSecondsToTomorrow() == 3600
 
 function getSecondsToTomorrow() {
 
-    let fechaActual = new Date();
+    const fechaActual = new Date();
 
     let fechaMannana = new Date(fechaActual.getFullYear(), fechaActual.getMonth(), fechaActual.getDate() + 1);
 

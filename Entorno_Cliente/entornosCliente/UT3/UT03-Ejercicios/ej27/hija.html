@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 27 - Hija</title>
+        <script src="ej27.js"></script>
+    </head>
+    <body>
+        <script>
+            window.addEventListener("message", function(evento) {
+                if (evento.origin === window.location.origin) {
+                    alert("Mensaje recibido en la ventana hija: " + evento.data);
+                } else {
+                    console.warn("Mensaje recibido de un origen no confiable:", evento.origin);
+                }
+            });
+        </script>
+        <button onclick="responder()">Responder</button>
+
+    </body>
+</html>
