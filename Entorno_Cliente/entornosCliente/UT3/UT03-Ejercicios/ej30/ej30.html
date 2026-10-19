@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 30 - Página 1</title>
+        <script src="ej30.js"></script>
+    </head>
+    <body>
+        <h1>Ejercicio 30 - Página 1</h1>
+        <button type="button" onclick="cambioPagina('pagina2.html')">
+            Ir a la página 2 conservando el historial
+        </button>
+        <button type="button" onclick="cambioPagina('pagina2.html', true)">
+            Ir a la página 2 reemplazando la página actual
+        </button>
+        <p>
+            Prueba cada modo por separado y pulsa el botón Atrás del navegador.
+            Al conservar el historial volverás a esta página; al reemplazar,
+            se saltará esta visita.
+        </p>
+        <h2>Valores que no cambian de página</h2>
+        <button type="button" onclick="cambioPagina('')">URL vacía</button>
+        <button type="button" onclick="cambioPagina(null)">URL null</button>
+        <button type="button" onclick="cambioPagina(undefined)">URL undefined</button>
+    </body>
+</html>

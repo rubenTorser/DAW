@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 34 - Página 2</title>
+        <script src="ej34.js"></script>
+    </head>
+    <body>
+        <h1>Ejercicio 34 - Página 2</h1>
+        <!--
+            Primera fase: activa este enlace y comenta el botón siguiente
+            para probar pag1 -> pag2 -> pag3 añadiendo entradas al historial.
+            Después restaura el botón para comparar con location.replace().
+            <p><a href="pag3.html">Ir a la página 3</a></p>
+        -->
+        <p>
+            <button type="button" onclick="irPagina3()">
+                Ir a la página 3 reemplazando esta visita
+            </button>
+        </p>
+        <button type="button" onclick="atras()">Atrás</button>
+        <button type="button" onclick="adelante()">Adelante</button>
+        <button type="button" onclick="atrasDosPaginas()">Atrás 2</button>
+        <p>
+            En el recorrido desde la página 1, sin entradas por delante,
+            replace conserva el número de entradas y sustituye esta visita por la página 3.
+            Al volver con Atrás desde la página 3, se saltará esta visita.
+        </p>
+        <p>Adelante no hace nada cuando ya estás al final del historial.</p>
+    </body>
+</html>

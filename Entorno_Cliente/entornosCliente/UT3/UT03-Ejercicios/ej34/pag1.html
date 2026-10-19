@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 34 - Página 1</title>
+        <script src="ej34.js"></script>
+    </head>
+    <body>
+        <h1>Ejercicio 34 - Página 1</h1>
+        <p><a href="pag2.html">Ir a la página 2</a></p>
+        <button type="button" onclick="atras()">Atrás</button>
+        <button type="button" onclick="adelante()">Adelante</button>
+        <button type="button" onclick="atrasDosPaginas()">Atrás 2</button>
+        <p>
+            Abre la consola para consultar history.length al cargar cada página.
+            Cuenta el historial total de esta pestaña, por lo que puede incluir
+            visitas anteriores al ejercicio.
+        </p>
+        <p>
+            Para probar la primera fase, activa el enlace comentado de pag2.html
+            y comenta su botón de ir a la página 3. Al recorrer las páginas
+            1, 2 y 3 mediante enlaces desde el final del historial, cada visita
+            añade una entrada. El total no tiene por qué ser 3.
+        </p>
+        <p>
+            En la versión final, la página 2 usa replace: sustituye su visita
+            por la página 3 sin añadir una entrada. Al pulsar Atrás desde la
+            página 3, volverás a la página 1.
+        </p>
+        <p>Adelante no hace nada cuando ya estás al final del historial.</p>
+    </body>
+</html>

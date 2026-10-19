@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 32 - Descomponer una URL</title>
+        <script src="ej32.js"></script>
+    </head>
+    <body>
+        <h1>Ejercicio 32 - Descomponer una URL</h1>
+        <p>Abre la consola del navegador y pulsa los botones para ver los resultados.</p>
+        <button type="button" onclick="console.log(descomponerURL('https://ejemplo.com:8080/curso/tema.html'))">
+            URL con puerto 8080
+        </button>
+        <button type="button" onclick="console.log(descomponerURL('http://ejemplo.com/index.html'))">
+            HTTP sin puerto (80)
+        </button>
+        <button type="button" onclick="console.log(descomponerURL('https://ejemplo.com/index.html'))">
+            HTTPS sin puerto (443)
+        </button>
+    </body>
+</html>

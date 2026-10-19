@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 33 - Mismo origen</title>
+        <script src="../ej32/ej32.js"></script>
+        <script src="ej33.js"></script>
+    </head>
+    <body>
+        <h1>Ejercicio 33 - Mismo origen</h1>
+        <p>Abre la consola del navegador y pulsa los botones para ver los resultados.</p>
+        <button type="button" onclick="console.log(mismoOrigen(
+            'https://ejemplo.com:8080/a.html',
+            'https://ejemplo.com:8080/b/c.html'))">
+            Mismo origen con rutas diferentes: true
+        </button>
+        <button type="button" onclick="console.log(mismoOrigen(
+            'http://ejemplo.com:8080/a.html',
+            'https://ejemplo.com:8080/a.html'))">
+            Distinto protocolo: false
+        </button>
+        <button type="button" onclick="console.log(mismoOrigen(
+            'https://ejemplo.com:8080/a',
+            'https://tienda.ejemplo.com:8080/a'))">
+            Distinto dominio: false
+        </button>
+        <button type="button" onclick="console.log(mismoOrigen(
+            'https://ejemplo.com:8080/a',
+            'https://ejemplo.com:9090/a'))">
+            Distinto puerto: false
+        </button>
+        <button type="button" onclick="console.log(mismoOrigen(
+            'https://ejemplo.com/a',
+            'https://ejemplo.com:443/b'))">
+            Puerto HTTPS por defecto: true
+        </button>
+        <button type="button" onclick="console.log(mismoOrigen(
+            'http://ejemplo.com/a',
+            'http://ejemplo.com:80/b'))">
+            Puerto HTTP por defecto: true
+        </button>
+    </body>
+</html>

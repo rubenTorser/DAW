@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 31 - Obtener parámetros</title>
+        <script src="ej31.js"></script>
+    </head>
+    <body>
+        <h1>Ejercicio 31 - Obtener parámetros</h1>
+        <p>
+            <a href="ej31.html?id=5&amp;nombre=Ana">Abrir con id=5 y nombre=Ana</a>
+        </p>
+        <p><a href="ej31.html">Abrir sin parámetros</a></p>
+        <p>
+            Abre la consola del navegador y pulsa los botones para consultar
+            los parámetros de la dirección actual. Con el primer enlace,
+            nombre devuelve "Ana", id devuelve "5" y edad devuelve null.
+            Sin parámetros, todos devuelven null.
+        </p>
+        <button type="button" onclick="console.log(obtenerParametro('nombre'))">
+            Obtener nombre
+        </button>
+        <button type="button" onclick="console.log(obtenerParametro('id'))">
+            Obtener id
+        </button>
+        <button type="button" onclick="console.log(obtenerParametro('edad'))">
+            Obtener edad
+        </button>
+    </body>
+</html>
