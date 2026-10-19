@@ -22,15 +22,16 @@ function abrirVentana(url, ancho, alto) {
     ventana = window.open(url, '_blank', `width=${ancho},height=${alto},left=${left},top=${top}`);
     if (!ventana) {
         console.log("No se ha podido abrir la ventana.");
-        return null;
     }
-    return ventana;
 }
 
-function cerrarVentana(ventana) {
+function cerrarVentana() {
     if (ventana && !ventana.closed) {
         ventana.close();
     } else {
         console.log("La ventana no existe o ya está cerrada.");
     }
 }
+
+
+abrirVentana('about:blank', 800, 600);
