@@ -28,11 +28,27 @@ Comparamos las tres primeras posiciones de ambos
 arrays. El path no interviene en la comparación.
 Esta función no navega ni modifica objetos BOM.
 **************************************************/
+// function mismoOrigen(url1, url2) {
+//     let partes1 = descomponerURL(url1);
+//     let partes2 = descomponerURL(url2);
+
+
+
+//     return partes1[0] === partes2[0] &&
+//         partes1[1] === partes2[1] &&
+//         partes1[2] === partes2[2];
+// }
+
+
+//Asignación desestructurante
 function mismoOrigen(url1, url2) {
     let partes1 = descomponerURL(url1);
     let partes2 = descomponerURL(url2);
 
-    return partes1[0] === partes2[0] &&
-        partes1[1] === partes2[1] &&
-        partes1[2] === partes2[2];
+    let [p1, d1, pu1] = partes1;
+    let [p2, d2, pu2] = partes2;
+
+    return p1 === p2 &&
+        d1 === d2 &&
+        pu1 === pu2;
 }

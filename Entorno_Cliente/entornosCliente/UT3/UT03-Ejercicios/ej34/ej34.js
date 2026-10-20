@@ -68,5 +68,5 @@ por delante, replace() mantiene el número de entradas
 que había al estar en pag2; un enlace añadiría otra.
 **************************************************/
 function irPagina3() {
-    window.location.replace("pag3.html");
+    window.location.replace("ej34.3.html");
 }
