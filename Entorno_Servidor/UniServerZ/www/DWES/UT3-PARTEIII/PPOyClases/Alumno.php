@@ -20,8 +20,13 @@ class Alumno
      y también en los del constructor que ahora está comentado.
     ***********************************************************/
     const CICLO = "DAW";
-    private $nombre;
-    private $edad;
+    const tasa_matricula = 2;
+    private string $nombre;
+    private int $edad;
+
+    static int $nMatricula = 0;
+
+    private string $matricula;
 
 
 
@@ -47,14 +52,15 @@ class Alumno
      Crea un alumno con sus datos iniciales, sin asignarlos después
      uno por uno. Este método no devuelve un valor.
     ***********************************************************/
-    /*function __construct(string $nombre, int $edad)
+    function __construct(string $nombre, int $edad)
     {
 
         $this->nombre = $nombre;
         $this->edad = $edad;
+        $this->matricula = "M-" . $this->incrementarMatricula();
 
 
-    }*/
+    }
 
     /*************************************************************
      MÉTODO CONSTRUCTOR PERSONALIZADO: constructAlumno
@@ -82,13 +88,13 @@ class Alumno
      Al no tener return, devuelve null de forma implícita; su utilidad
      es modificar los atributos del objeto con los valores recibidos.
     *************************************************************/
-    public function constructAlumno(string $nombre, int $edad)
+    /*public function constructAlumno(string $nombre, int $edad)
     {
 
         $this->nombre = $nombre;
         $this->edad = $edad;
 
-    }
+    }*/
 
 
     /***********************************************************
@@ -164,6 +170,47 @@ class Alumno
     {
 
         return "Nombre: " . $this->nombre . " Edad: " . $this->edad . " Ciclo: " . self::CICLO;
+
+    }
+
+
+
+    static function incrementarMatricula(): int
+    {
+        return self::$nMatricula++;
+
+    }
+
+
+
+    function esMenor(): bool
+    {
+
+        $esMenor = false;
+
+        if ($this->edad < 18) {
+            $esMenor = true;
+        }
+
+        return $esMenor;
+
+    }
+
+
+    function importeMatricula(): float
+    {
+
+        $importeMatricula = 0;
+
+        if ($this->esMenor()) {
+
+            $importeMatricula = 0;
+
+        } else {
+            $importeMatricula = self::tasa_matricula;
+        }
+
+        return $importeMatricula;
 
     }
 
