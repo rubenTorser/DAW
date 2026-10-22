@@ -3,15 +3,9 @@
 class Ejercicio1
 {
 
-
     /*
     Si el método es estático, se puede llamar sin necesidad de crear una instancia de la clase.
     */
-
-    function __construct()
-    {
-
-    }
 
     //Comprobar que un valor entero (n) no es nulo.
     function esNulo($valor): bool
@@ -57,11 +51,11 @@ class Ejercicio1
     }
 
 
-    //Obtener un array con los datos anteriores (n1, n2 y c1).
-    function obtenerDatos(int $n1, int $n2, string $c1): array
+    //Obtener un array con los resultados de los métodos anteriores.
+    function obtenerDatos(int $n1, int $n2, string $cadena): array
     {
 
-        return [$n1, $n2, $c1];
+        return [$n1, $n2, $cadena];
 
     }
 

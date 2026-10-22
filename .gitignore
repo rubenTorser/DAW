@@ -3,6 +3,6 @@
 # Example .gitignore files: https://github.com/github/gitignore
 /.vscode/
 /tmp/
-/access.log/
-/error.log/
-/httpd.pid/
+access.log
+error.log
+httpd.pid
