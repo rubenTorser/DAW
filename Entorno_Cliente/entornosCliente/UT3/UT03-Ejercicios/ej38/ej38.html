@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 38 - Almacenar una fecha</title>
+        <script src="ej38.js"></script>
+    </head>
+    <body>
+        <h1>Ejercicio 38 - Almacenar una fecha</h1>
+        <p>Abre esta página con Live Server y pulsa el botón para guardar la fecha de hoy.</p>
+        <p>Comprueba las claves dia, mes y anno en Application &gt; Local Storage.</p>
+        <button type="button" onclick="almacenarFecha(new Date());
+            console.log('Día:', localStorage.getItem('dia'));
+            console.log('Mes:', localStorage.getItem('mes'));
+            console.log('Año:', localStorage.getItem('anno'));">
+            Guardar la fecha de hoy
+        </button>
+        <p><a href="../ej39/ej39.html">Recuperar la fecha en el ejercicio 39</a></p>
+    </body>
+</html>
