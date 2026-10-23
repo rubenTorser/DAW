@@ -14,7 +14,7 @@ guardar el objeto sin JSON.stringify y observa qué se almacena realmente.
 
 function guardarAlumno(alumno) {
 
-    // localStorage solo guarda cadenas. JSON.stringify convierte el objeto en texto JSON.
+    // Como en localStorage solo podremos guardar cadenas, convertiremos el objeto en texto JSON con JSON.stringify.
     localStorage.setItem("alumno", JSON.stringify(alumno));
 
 }
@@ -23,20 +23,20 @@ function leerAlumno() {
 
     let datosAlumno = localStorage.getItem("alumno");
 
-    // Si la clave no existe, getItem devuelve null y no hay ningún alumno guardado.
+    // Si no encontramos la clave, devolveremos null para indicar que no tendremos ningún alumno guardado.
     if (datosAlumno === null) {
         return null;
     }
 
-    // JSON.parse reconstruye el objeto y también su array de aficiones.
+    // Con JSON.parse reconstruiremos el objeto y también su array de aficiones.
     return JSON.parse(datosAlumno);
 
 }
 
 function probarAlumnoSinJSON() {
 
-    // Usamos otra clave para conservar el alumno guardado correctamente.
-    // Sin JSON.stringify, el objeto se convierte en la cadena "[object Object]".
+    // Usaremos otra clave para conservar el alumno guardado correctamente.
+    // Sin JSON.stringify, guardaremos el objeto convertido en la cadena "[object Object]".
     localStorage.setItem("alumnoSinJSON", alumnoEjemplo);
     console.log("Alumno guardado sin JSON.stringify:");
     console.log(localStorage.getItem("alumnoSinJSON"));

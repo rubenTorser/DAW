@@ -13,18 +13,18 @@ pestaña Application.
 *******************************************************************************/
 
 function contarVisitas() {
-    // getItem devuelve una cadena, o null si la clave todavía no existe.
-    // Number convierte la cadena en número. Number(null) devuelve 0.
+    // Con getItem obtendremos una cadena, o null para una clave inexistente.
+    // Convertiremos el resultado con Number y partiremos de 0 si recibimos null.
     let visitas = Number(localStorage.getItem("visitas"));
     visitas++;
 
-    // setItem guarda el nuevo número convertido automáticamente en cadena.
+    // Guardaremos el nuevo número como cadena mediante setItem.
     localStorage.setItem("visitas", visitas);
     return visitas;
 }
 
 function contarVisitasSesion() {
-    // Hacemos lo mismo usando el almacenamiento de esta pestaña.
+    // Haremos lo mismo usando el almacenamiento de esta pestaña.
     let visitas = Number(sessionStorage.getItem("visitasSesion"));
     visitas++;
 
@@ -32,19 +32,19 @@ function contarVisitasSesion() {
     return visitas;
 }
 
-// Cada función se llama una sola vez cuando se carga este archivo.
+// Llamaremos a cada función una sola vez al cargar este archivo.
 console.log(`Esta es tu visita número ${contarVisitas()}`);
 console.log(`Esta es tu visita de sesión número ${contarVisitasSesion()}`);
 
 /*
 PRUEBAS EN EL NAVEGADOR:
-- En Application, consulta Local Storage y Session Storage para ver las claves.
-- Recarga la página: aumentan los dos contadores.
-- Abre una pestaña nueva y escribe la misma dirección: localStorage comparte
-  el contador del mismo origen y sessionStorage empieza una sesión de pestaña.
-  Al duplicar una pestaña o abrirla desde otra, puede copiarse su sessionStorage.
-- Cierra y vuelve a abrir el navegador: localStorage conserva el contador.
-  sessionStorage normalmente empieza de nuevo; si el navegador restaura la
-  sesión anterior, también puede recuperar los datos de sus pestañas.
-- Llamar a una función manualmente también suma una visita, aunque no recargues.
+- Consultaremos Local Storage y Session Storage en Application para ver las claves.
+- Recargaremos la página y comprobaremos el incremento de los dos contadores.
+- Abriremos una pestaña nueva y escribiremos la misma dirección: compartiremos
+  el contador de localStorage del mismo origen y empezaremos una sesión de pestaña.
+  Al duplicar una pestaña o abrirla desde otra, podremos recibir una copia de su sessionStorage.
+- Cerraremos y volveremos a abrir el navegador: conservaremos el contador local
+  y normalmente empezaremos de nuevo el de sesión. Si el navegador restaura
+  la sesión anterior, también podremos recuperar los datos de sus pestañas.
+- También sumaremos una visita al llamar a una función manualmente, sin recargar.
 */

@@ -19,16 +19,16 @@ function recuperarFecha() {
     let mes = localStorage.getItem("mes");
     let anno = localStorage.getItem("anno");
 
-    // getItem() devuelve null si una clave no existe.
-    // Necesitamos las tres partes para reconstruir una fecha completa.
+    // Con getItem() obtendremos null para las claves inexistentes.
+    // Comprobaremos las tres partes antes de reconstruir una fecha completa.
     if (dia === null || mes === null || anno === null) {
         return null;
     }
 
-    // Convertimos las cadenas a números y restamos 1 al mes guardado.
+    // Convertiremos las cadenas a números y restaremos 1 al mes guardado.
     return new Date(Number(anno), Number(mes) - 1, Number(dia));
 }
 
-// Al cargar solo leemos: así la recarga permite comprobar la persistencia.
-// almacenarFecha() está definida en el ejercicio 38 y se carga desde el HTML.
+// Al cargar solo leeremos: así comprobaremos la persistencia tras la recarga.
+// Reutilizaremos almacenarFecha() del ejercicio 38 mediante su script en el HTML.
 console.log("Fecha recuperada:", recuperarFecha());

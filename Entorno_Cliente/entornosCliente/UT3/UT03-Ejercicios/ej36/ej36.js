@@ -10,9 +10,9 @@
 
 **************************************************************/
 
-// Si no recibimos un idioma, usamos el que indica el navegador.
+// Utilizaremos el idioma del navegador como valor por defecto del parámetro.
 function saludo(idioma = navigator.language) {
-    // startsWith comprueba si la cadena comienza por el texto indicado.
+    // Comprobaremos con startsWith si la cadena comienza por el texto indicado.
     if (idioma.startsWith("es")) {
         return "¡Hola!";
     }
@@ -21,11 +21,11 @@ function saludo(idioma = navigator.language) {
         return "Bonjour !";
     }
 
-    // Cualquier idioma que no empiece por es o fr recibe este saludo.
+    // Devolveremos este saludo para cualquier idioma que no empiece por es o fr.
     return "Hello!";
 }
 
-console.log(saludo("es-ES")); // ¡Hola!
-console.log(saludo("fr-FR")); // Bonjour !
-console.log(saludo("de-DE")); // Hello!
-console.log(saludo()); // Utiliza navigator.language.
+console.log(saludo("es-ES")); // Mostraremos "¡Hola!".
+console.log(saludo("fr-FR")); // Mostraremos "Bonjour !".
+console.log(saludo("de-DE")); // Mostraremos "Hello!".
+console.log(saludo()); // Utilizaremos navigator.language.
