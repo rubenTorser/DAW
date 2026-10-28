@@ -24,6 +24,8 @@ abstract class AlumnoFFE
 
     }
 
+    abstract function calcularMedia(): float;
+
     abstract function superaCurso(): string;
 }
 
