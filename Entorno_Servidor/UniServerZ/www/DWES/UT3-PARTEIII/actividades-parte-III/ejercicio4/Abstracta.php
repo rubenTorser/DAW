@@ -1,10 +1,10 @@
 <?php
 
-/*******
+/*********************************************************************
 DEFINIREMOS EL CONTRATO COMÚN
 Compartiremos la constante y el valor estático entre las clases hijas.
 Exigiremos la implementación de los métodos ayudas() y mensaje().
-*******/
+**********************************************************************/
 abstract class Abstracta
 {
     public const CONSTANTE = 'Todos';
@@ -15,10 +15,10 @@ abstract class Abstracta
 
     abstract public function mensaje(): string;
 
-    /*******
+    /*********************************************************************
     INCREMENTAREMOS EL VALOR COMPARTIDO
     Sumaremos una unidad al mismo valor desde la clase padre o sus hijas.
-    *******/
+    *********************************************************************/
     public static function modificar_static(): void
     {
         self::$valor++;

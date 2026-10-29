@@ -18,6 +18,14 @@ class Segundo extends AlumnoFFE
         $this->calificacionFFEOE = $calificacionFFEOE;
     }  
 
+
+    public function calcularMedia(): float
+    {
+        $vacio=0;
+
+        return $vacio;
+    }
+
     public function superaCurso(): string{
 
         $al1=new Primero("Juan", 20, $this->notasAlumnoPrimero); // Crear un objeto de la clase Primero con las calificaciones de los módulos de primero

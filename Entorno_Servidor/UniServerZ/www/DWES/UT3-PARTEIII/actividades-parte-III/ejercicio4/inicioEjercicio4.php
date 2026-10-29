@@ -1,7 +1,7 @@
 <?php
 
-require_once __DIR__ . '/Joven.php';
-require_once __DIR__ . '/Adulto.php';
+require_once 'Joven.php';
+require_once 'Adulto.php';
 
 /*******
 PREPARAREMOS LOS CASOS DE COMPROBACIÓN

@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/Abstracta.php';
+require_once 'Abstracta.php';
 
 class Adulto extends Abstracta
 {
