@@ -22,7 +22,13 @@ function copiaOrdenada(arr) {
     let copia = arr.slice();
 
     // Ordenaremos alfabéticamente las cadenas de la copia con sort().
-    copia.sort();
+    copia.sort(
+
+        function (a, b) {
+        return a.localeCompare(b);
+        }
+
+    );
 
     return copia;
 
@@ -30,7 +36,7 @@ function copiaOrdenada(arr) {
 
 
 // Probaremos la función con las cadenas del enunciado.
-let arr = ["HTML", "CSS", "JavaScript"];
+let arr = ["hTML", "CSS", "JavaScript"];
 let arrOrdenado = copiaOrdenada(arr);
 
 // Mostraremos el original: ["HTML", "CSS", "JavaScript"].

@@ -32,3 +32,30 @@ ordenaDecreciente(arr);
 
 // Mostraremos el array original modificado: [8, 5, 2, 1, -10].
 console.log(arr);
+
+
+function ordenarNumeros(arr) {
+
+    // Utilizaremos una función de comparación para ordenar por valor numérico.
+    // Con b - a, colocaremos los valores mayores antes que los menores.
+    arr.sort((n1, n2) => 
+    
+        {
+            if (n1 == n2) {
+                return 0;
+            }
+            else if (n1 < n2) {
+                return -1;
+            }
+            else {
+                return 1;
+            }
+        }
+
+    );
+
+}
+
+ordenarNumeros(arr);
+
+console.log(arr);

@@ -45,3 +45,59 @@ ordenarPorEdad(arr);
 console.log(arr[0].nombre);
 console.log(arr[1].nombre);
 console.log(arr[2].nombre);
+
+
+/******************************************************************************
+FIND:
+La función find() devuelve el primer elemento de un array que cumple con la condición dada.
+
+**************
+La función cómo parámetro puede ser una función flecha o una función normal.
+**************
+
+FINDINDEX:
+La función findIndex() devuelve el índice del primer elemento de un array que cumple con la condición dada.
+
+
+FILTER:
+La función filter() devuelve un array con todos los elementos que cumplen con la condición dada.
+
+
+MAP:
+La función map() devuelve un array con los resultados de aplicar la función dada a cada elemento del array original.
+
+*******************************************************************************/
+
+//FUNCIÓN FLECHA
+let pedroEncontrado = arr.find((usuario) => usuario.nombre === "Pedro");
+
+//FUNCIÓN NORMAL
+let pedroEncontrado2 = arr.find(
+    function (usuario) {
+        return usuario.nombre === "Pedro";
+    }
+);
+
+//FUNCIÓN FLECHA
+let pedroEncontradoIndex = arr.findIndex((usuario) => usuario.nombre === "Pedro");
+
+//FUNCIÓN NORMAL
+let pedroEncontradoIndex2 = arr.findIndex(
+    function (usuario) {
+        return usuario.nombre === "Pedro";
+    }
+);
+
+let usuariosFiltrados = arr.filter((usuario) => usuario.edad >= 28);
+
+let usuariosMapeados = arr.map((usuario) => usuario.nombre);
+
+//Mostramos los resultados de las búsquedas.
+console.log("Resultados de las búsquedas:");
+
+console.log(pedroEncontrado);
+console.log(pedroEncontrado2);
+console.log(pedroEncontradoIndex);
+console.log(pedroEncontradoIndex2);
+console.log(usuariosFiltrados);
+console.log(usuariosMapeados);
