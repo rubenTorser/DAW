@@ -13,37 +13,58 @@ Tenemos un array con números y cadenas, con algunas cadenas repetidas.
 ********************************************************************************/
 
 
-let bolaDeDrac = [
+// Utilizaremos un array con números y cadenas, con algunos nombres repetidos.
+let bolaDeDrac = [1, "Son Goku", 2, "Vegeta", 3, "Kame-Senin", 4, "Son Goku", 5, "Kame-Senin"];
+let cadenaABuscar = "Kame-Senin";
 
-    { id: 1, nombre: "Son Goku" },
-    { id: 2, nombre: "Vegeta" },
-    { id: 3, nombre: "Kame-Senin" },
-    { id: 4, nombre: "Son Goku" },
-    { id: 5, nombre: "Kame-Senin" }
+// Crearemos una copia para cada apartado con slice(), conservando el original.
+// 1) Cambiaremos únicamente la primera aparición de la cadena.
+let arrayPrimera = bolaDeDrac.slice();
 
-];
+// Obtendremos con indexOf() la primera posición de la cadena, o -1 si no aparece.
+let posicionPrimera = arrayPrimera.indexOf(cadenaABuscar);
 
-let encontrado = false;
-let cadenaABuscar = "Kame-Senin"
+// Comprobaremos que existe antes de acceder a ella y convertirla a mayúsculas.
+if (posicionPrimera !== -1) {
 
-for (let i = 0; i < bolaDeDrac.length && encontrado == false; i++) {
-
-    if (bolaDeDrac[i].nombre === cadenaABuscar) {
-
-        let cadenaEnMayusculas = cadenaABuscar.toUpperCase();
-
-        bolaDeDrac[i].nombre = cadenaEnMayusculas;
-
-        encontrado = true;
-
-    }
+    arrayPrimera[posicionPrimera] = arrayPrimera[posicionPrimera].toUpperCase();
 
 }
 
-bolaDeDrac.forEach(elemento =>
+console.log("1) Primera aparición en mayúsculas:", arrayPrimera);
 
-    console.log(elemento.nombre)
 
-);
+// 2) Cambiaremos únicamente la última aparición de la cadena.
+let arrayUltima = bolaDeDrac.slice();
+
+// Buscaremos desde el final con lastIndexOf() y obtendremos la última posición.
+let posicionUltima = arrayUltima.lastIndexOf(cadenaABuscar);
+
+// Si no encontramos la cadena, conservaremos el array sin cambios.
+if (posicionUltima !== -1) {
+
+    arrayUltima[posicionUltima] = arrayUltima[posicionUltima].toUpperCase();
+
+}
+
+console.log("2) Última aparición en mayúsculas:", arrayUltima);
+
+
+// 3) Cambiaremos todas las apariciones de la cadena.
+let arrayTodas = bolaDeDrac.slice();
+let posicion = arrayTodas.indexOf(cadenaABuscar);
+
+// Repetiremos la sustitución mientras encontremos alguna coincidencia.
+while (posicion !== -1) {
+
+    arrayTodas[posicion] = arrayTodas[posicion].toUpperCase();
+
+    // Buscaremos a partir de la siguiente posición para avanzar en cada vuelta,
+    // incluso si la cadena que buscamos ya está en mayúsculas.
+    posicion = arrayTodas.indexOf(cadenaABuscar, posicion + 1);
+
+}
+
+console.log("3) Todas las apariciones en mayúsculas:", arrayTodas);
 
 
