@@ -7,9 +7,9 @@ join de los arrays.
 
 function ordenarLetras(cadena) {
 
-    let cadenaSinMayus = cadena.toLowerCase();
+    //let cadenaSinMayus = cadena.toLowerCase();
 
-    let arrayCadena = Array.from(cadenaSinMayus);
+    let arrayCadena = Array.from(cadena);
 
     let arrayOrdenado = arrayCadena.sort(
         function (a, b) {

@@ -11,6 +11,18 @@ let user = {};
 
 user.name = 'John';
 user.surname = 'Smith';
+
+console.log(user); // { name: 'John', surname: 'Smith' }
+
+console.log(user.name); // John
+console.log(user.surname); // Smith
+
 user.name = 'Pete';
 
+console.log(user.name); // Pete
+
 delete user.surname;
+
+console.log(user);
+
+console.log(user.surname); // undefined
