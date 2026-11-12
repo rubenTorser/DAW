@@ -2,10 +2,10 @@
 
 require_once('../modelo/Inmobiliaria.php');
 
-if(!empty($_POST['superficie']) && $_POST['orientacion'] && $_POST['banos'] && $_POST['habitaciones'])
+if(!empty($_POST['superficie']) && !empty($_POST['orientacion']) && !empty($_POST['banos']) && !empty($_POST['habitaciones']))
     {
 
-
+    echo 'Los datos son correctos';
 
     }
 else
