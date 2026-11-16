@@ -32,13 +32,23 @@ menu = {
 function multiplyNumeric(obj) {
 
     // Recorreremos los nombres de todas las propiedades con for...in.
-    for (let propiedad in obj) {
+    /*for (let propiedad in obj) {
 
         // Comprobaremos el tipo del valor para multiplicar solamente los números.
         if (typeof obj[propiedad] === "number") {
             obj[propiedad] *= 2;
         }
 
+    }*/
+
+    for(let i=0; i<Object.keys(obj).length; i++){
+        
+        if(typeof obj[Object.keys(obj)[i]] === "number"){
+
+            Object.keys(obj)[i] *= 2;
+
+        }
+        
     }
 
     // No devolveremos ningún valor: habremos modificado el mismo objeto.
@@ -57,3 +67,5 @@ multiplyNumeric(menu);
 
 // Mostraremos width: 400, height: 600 y title: "Mi menú".
 console.log(menu);
+
+console.log(menu['title']);
