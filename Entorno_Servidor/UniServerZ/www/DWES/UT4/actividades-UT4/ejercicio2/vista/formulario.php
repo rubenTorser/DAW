@@ -13,7 +13,7 @@ include '../libreria/obtenerDatos.php';
     <form action="../controlador/controlador.php" method="POST">
         <table border="1" cellspacing="5" cellpadding="10" align="center" bgcolor="yellow">
             <tr>
-                <td allign="left">
+                <td align="left">
                     Superficie (m2):<br>
     <?php
     $superficies=obtenerSuperficies();
@@ -27,7 +27,7 @@ include '../libreria/obtenerDatos.php';
                         <input type="radio" name="superficie"> Entre 80 y 100 m2<br>
                         <input type="radio" name="superficie"> &gt;100 m2 -->
                 </td>
-                <td allign="left">
+                <td align="left">
                     Orientación:<br>
     <?php
     $orientaciones=obtenerOrientaciones();
@@ -40,7 +40,7 @@ include '../libreria/obtenerDatos.php';
                 </td>
             </tr>
             <tr>
-                <td allign="left">
+                <td align="left">
                     Nº de baños:
                     <select name="banos">
                         <?php
@@ -57,7 +57,7 @@ include '../libreria/obtenerDatos.php';
                             <option value="3">3</option>
                         </select>-->
                 </td>
-                <td allign="right">
+                <td align="right">
                     Nº de habitaciones:
                        <select name="habitaciones">
                         <?php
