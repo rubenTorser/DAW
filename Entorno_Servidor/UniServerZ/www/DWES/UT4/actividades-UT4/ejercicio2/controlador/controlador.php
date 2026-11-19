@@ -2,18 +2,23 @@
 
 require_once('../modelo/Inmobiliaria.php');
 
-if(!empty($_POST['superficie']) && !empty($_POST['orientacion']) && !empty($_POST['banos']) && !empty($_POST['habitaciones']))
-    {
+if (isset($_POST['enviar'])){
 
-    echo 'Los datos son correctos';
+    if(isset($_POST['superficie'], $_POST['orientacion'], $_POST['banos'], $_POST['habitaciones'])
+        && $_POST['superficie'] !== '' && $_POST['orientacion'] !== '')
+        {
 
-    }
-else
-    {
+            $casa= new Inmobiliaria($_POST['superficie'], $_POST['banos'], $_POST['orientacion'], $_POST['habitaciones']);
+            $precio= $casa->calcularPrecio();
+            header("location:../vista/salida.php?r=$precio"); 
+        }
+    else
+        {
 
-        $error='Los datos no son correctos';
-        header("location: ../vista/salidaError.php?r=$error");
+            $error='Los datos no son correctos';
+            header("location: ../vista/salidaError.php?r=$error");
 
-    }
+        }
 
+}
 ?>

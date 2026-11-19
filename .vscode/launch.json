@@ -62,6 +62,9 @@
                 "-dxdebug.start_with_request=yes",
                 "-dxdebug.client_host=127.0.0.1",
                 "-dxdebug.client_port=${port}",
+                // TEMPORAL (diagnóstico): registro de Xdebug. Quitar al terminar.
+                "-dxdebug.log=${env:LOCALAPPDATA}/Temp/xdebug-daw.log",
+                "-dxdebug.log_level=10",
                 "-S",
                 "127.0.0.1:0",
                 "-t",
