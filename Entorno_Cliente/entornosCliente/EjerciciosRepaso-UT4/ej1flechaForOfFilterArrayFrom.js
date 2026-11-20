@@ -57,8 +57,8 @@ console.log(contarLetras2("hala","a"));
 /*******************************************
             FUNCIÓN FLECHA
 *******************************************/
-let contarLetras3 = function (cadena, letra) => {
+let contarLetras3 = (cadena, letra) => 
+    Array.from(cadena).filter(caracter => caracter === letra).length;
 
     
-
-}
+console.log(contarLetras3("jajajajaja","a"));
