@@ -31,7 +31,7 @@ function topSalary(salaries){
 
     for (let [clave, valor] of Object.entries(salaries)) { 
 
-        if(valor> mejorPagado.salario){
+        if(valor > mejorPagado.salario){
 
             mejorPagado.nombre=clave;
             mejorPagado.salario=valor;
