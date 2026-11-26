@@ -5,9 +5,7 @@ if(isset($_POST['enviar'])){
     $examen = isset($_POST['examen']) ? 'realizado' : 'no realizado';
     $test = isset($_POST['test']) ? 'realizado' : 'no realizado';
 
-    if(isset($_COOKIE['test-examen'])){
-        setcookie("test-examen", "", time() - 1);
-        setcookie('test-examen', $test . '-' . $examen, time() + 3600);
+    setcookie('test-examen', $test . '-' . $examen, time() + 3600);
 
     die("FIN DE EJECUCIÓN");
 

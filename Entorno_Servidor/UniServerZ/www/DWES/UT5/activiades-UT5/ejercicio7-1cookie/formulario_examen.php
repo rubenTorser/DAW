@@ -3,10 +3,10 @@
 if(isset($_POST['enviar'])){
 
     $examen = isset($_POST['examen']) ? 'realizado' : 'no realizado';
-    $test = isset($_POST['test']) ? 'realizado' : 'no realizado';
+    $test = 'realizado';
 
     setcookie('test-examen', $test . '-' . $examen, time() + 3600);
-
+    
     die("FIN DE EJECUCIÓN");
 
 }

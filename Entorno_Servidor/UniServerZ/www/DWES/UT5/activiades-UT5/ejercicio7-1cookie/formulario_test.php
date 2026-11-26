@@ -2,11 +2,11 @@
 
 if(isset($_POST['enviar'])){
 
-    $examen = isset($_POST['examen']) ? 'realizado' : 'no realizado';
+    $examen = 'realizado';
     $test = isset($_POST['test']) ? 'realizado' : 'no realizado';
 
     setcookie('test-examen', $test . '-' . $examen, time() + 3600);
-
+    
     die("FIN DE EJECUCIÓN");
 
 }
